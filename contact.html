@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title> 
+    <link rel="icon" type="image/png" href="assets/images/logo-ecole.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+   <section class="container-header">
+        <div class="container-hearder">
+             <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid d-flex align-items-center">
+                    <!-- Logo à gauche -->
+                    <div>
+                      <img src="assets/images/logo-ecole.jpg" alt="logo du site" width="70" height="70">
+                    </div>
+                    
+                    <!-- Bouton hamburger pour mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <!-- Menu centré horizontalement (entre logo et droite) -->
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
+                        <ul class="navbar-nav mb-2 mb-lg-0 gap-5">
+                            <li class="nav-item">
+                            <a class="nav-link active textHeader" href="index.html" id="accueil"><i class="fa-solid fa-house" style="margin-right:4px;"></i>Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active textHeader" href="formation.html" id="formation"><i class="fa-solid fa-graduation-cap" style="margin-right:4px;"></i>Formation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active textHeader" href="contact.html" id="contact"><i class="fa-solid fa-envelope" style="margin-right:4px;"></i>Contact</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link active textHeader" href="galeries.html" id="galeries"><i class="fa-solid fa-images" style="margin-right:4px;"></i>Galeries</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+   </section> 
+   <section class="container-body-contact">
+      <!-- Section Contact Principal -->
+        <section class="contact-hero bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-0" data-aos="flip-left">CONTACTEZ-NOUS !</h1>
+            </div>
+        </section>
+
+        <!-- Section Contenu Contact -->
+        <section class="contact-content py-5">
+            <div class="container">
+                <div class="row align-items-center" id="contact-intro">
+                    <div class="col-lg-6">
+                        <div class="pe-lg-4">
+                            <p class="lead mb-4 textConact" data-aos="zoom-in">
+                                Vous avez une question ? Une demande d'information ? 
+                                Notre équipe est là pour vous répondre rapidement. 
+                                Choisissez votre mode de contact : remplissez notre 
+                                formulaire en ligne ou contactez-nous directement.
+                            </p>
+                            
+                            <div class="d-flex flex-column flex-sm-row gap-3" data-aos="fade-up">
+                                <button class="btn btn-warning btn-lg px-4 py-3" id="showFormBtn">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    Formulaire de contact
+                                </button>
+                                <button class="btn btn-dark btn-lg px-4 py-3" id="showContactBtn">
+                                    <i class="fas fa-phone me-2"></i>
+                                    Contact direct
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 imgContact" data-aos="fade-left">
+                        <div class="text-center mt-3 mt-lg-0">
+                            <!-- Illustration de contact -->
+                            <div class="contact-illustration">
+                                <svg width="300" height="200" viewBox="0 0 300 200" class="img-fluid">
+                                    <!-- Bureau -->
+                                    <rect x="50" y="120" width="200" height="60" fill="#4a5568" rx="5"/>
+                                    <!-- Écran -->
+                                    <rect x="80" y="80" width="140" height="90" fill="#2d3748" rx="3"/>
+                                    <rect x="85" y="85" width="130" height="70" fill="#4299e1" rx="2"/>
+                                    
+                                    <!-- Personne 1 -->
+                                    <circle cx="120" cy="60" r="20" fill="#f7fafc"/>
+                                    <circle cx="120" cy="55" r="12" fill="#fbb6ce"/>
+                                    <path d="M108,65 Q120,75 132,65" fill="#4299e1"/>
+                                    
+                                    <!-- Personne 2 -->
+                                    <circle cx="180" cy="70" r="18" fill="#f7fafc"/>
+                                    <circle cx="180" cy="66" r="10" fill="#fc8181"/>
+                                    <path d="M170,75 Q180,83 190,75" fill="#e53e3e"/>
+                                    
+                                    <!-- Éléments de communication -->
+                                    <circle cx="50" cy="40" r="15" fill="#48bb78"/>
+                                    <rect x="45" y="35" width="10" height="10" fill="white" rx="1"/>
+                                    
+                                    <circle cx="250" cy="50" r="12" fill="#ed8936"/>
+                                    <circle cx="250" cy="50" r="6" fill="white"/>
+                                    
+                                    <circle cx="270" cy="80" r="10" fill="#9f7aea"/>
+                                    <path d="M265,77 L275,83" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de Contact (caché par défaut) -->
+                <div class="row justify-content-center mt-5" id="contactForm" style="display: none;">
+                    <div class="col-lg-10">
+                        <div class="card shadow-lg border-0">
+                            <div class="card-header bg-white py-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h3 class="text-primary mb-0">
+                                        <i class="fas fa-envelope me-2"></i>
+                                        Formulaire de contact
+                                    </h3>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" id="backToIntro">
+                                        <i class="fas fa-arrow-left me-1"></i>
+                                        Retour
+                                    </button>
+                                </div>
+                                <p class="text-primary mt-2 mb-0">Veuillez remplir le formulaire ci-dessous !</p>
+                            </div>
+                            <div class="card-body p-4">
+                                <form>
+                                     <input type="hidden" name="societe_name" id="wsociete_name">
+                                     <input type="hidden" name="title" id="wtitle">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label fw-semibold">Votre nom</label>
+                                            <input type="text" class="form-control form-control-lg" id="wname" name="name" placeholder="Koua">
+                                            <span id="wmessageErrorName"></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label fw-semibold">Votre prénom</label>
+                                            <input type="text" class="form-control form-control-lg" id="wfirstName" placeholder="Bonou ange">
+                                            <span id="wfirtnameError"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label fw-semibold">N° Téléphone</label>
+                                            <input type="tel" class="form-control form-control-lg" id="wphone" name="tel" placeholder="01 03 04 05 01">
+                                            <span id="wphoneError"></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="location" class="form-label fw-semibold">Lieu de résidence</label>
+                                            <input type="text" class="form-control form-control-lg" id="wlocation" name="adress" placeholder="Divo">
+                                            <span id="wlocatError"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label fw-semibold">Adresse e-mail</label>
+                                            <input type="email" name="email" class="form-control form-control-lg" id="wemail" placeholder="exemple@gmail.com">
+                                            <span id="wemailError"></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="subject" class="form-label fw-semibold">Objet de la demande</label>
+                                            <select class="form-select form-select-lg" id="wsubject" name="title_object">
+                                                <option value="" selected>Choisissez un objet</option>
+                                                <option value="info">Demande d'information</option>
+                                                <option value="inscription">Inscription</option>
+                                                <option value="autre">Autre</option>
+                                            </select>
+                                             <span id="wsubjectError"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="message" class="form-label fw-semibold">Entrez votre message</label>
+                                        <textarea class="form-control" id="wmessage" name="message" rows="6" placeholder="Entrez le message ici............"></textarea>
+                                        <span id="wmessageError"></span>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5 py-3 btnSend" value="Send">
+                                            <i class="fas fa-paper-plane me-2"></i>
+                                            Envoyer
+                                        </button>
+                                        <p class="text-muted mt-3 mb-0">
+                                            <em>Votre réponse sera transmise par email dans un délai maximum de 24 heures.</em>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+   </section>
+
+   <!-- Modal Contact Direct -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 pb-1">
+                    <h5 class="modal-title text-primary fw-bold" id="contactModalLabel">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Choisissez votre option pour appeler ou discuter avec nous directement !</span>
+                    </h5>
+                    <button type="button" class="btn-close py-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-5">
+                    <div class="d-grid gap-4">
+                        <!-- WhatsApp -->
+                        <!-- <a href="https://wa.me/22501020304050" class="contact-option text-decoration-none" target="_blank"> -->
+                            <div class="d-flex align-items-center p-3 rounded-3 contact-item contactWhat">
+                                <div class="contact-icon-whatsapp me-3">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 text-dark fw-semibold">WhatsApp</h6>
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
+                        <!-- </a> -->
+                        
+                        <!-- Appel téléphonique -->
+                        <a href="tel:+22500000000000" class="contact-option text-decoration-none">
+                            <div class="d-flex align-items-center p-3 rounded-3 contact-item">
+                                <div class="contact-icon-phone me-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 text-dark fw-semibold">Appel téléphonique</h6>
+                                    <small class="text-muted">+225 00 00 00 00 00 00</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <p class="text-center text-muted mt-4 mb-0">
+                        <em>Nous vous répondrons immédiatement.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="wmessageSucces" tabindex="-1" aria-labelledby="messageSuccesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 pb-1">
+                    <h5 class="modal-title text-primary fw-bold" id="messageSuccesLabel">
+                        Information !!!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-5">
+                    <div class="d-grid gap-4">
+                        <span style="text-align: center;font-size: 17px;color: green;font-weight: bolder;">Message envoyer avec succès</span>
+                        <p>
+                           <span style="font-family: initial; font-size: 15px; color: gray;">Nous vous répondrons dans les 24h.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <section class="container-footer">
+      <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content" data-aos="zoom-in">
+                <!-- Logo et informations -->
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo-ecole.jpg" alt="Logo Collège René Kanga" class="logo-img">
+                        <div class="logo-text">
+                            <h3>Collège René Kanga</h3>
+                            <p>Excellence • Innovation • Réussite</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contacts -->
+                <div class="footer-contacts">
+                    <h4 class="contacts-title">CONTACTS</h4>
+                    <div class="contact-item">
+                        <i class="contact-icon">📞</i>
+                        <span>+225 00 00 00 00 00</span>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://wa.me/2250503509851" target="_blank" style="text-decoration: none;color: white;">
+                            <i class="fab fa-whatsapp contact-whatsapp"></i>
+                            <span>+225 01 02 03 04 05</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="contact-icon">✉️</i>
+                        <span>collegerenekanga@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="contact-icon">📍</i>
+                        <span>Abidjan, Côte d'Ivoire</span>
+                    </div>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div class="footer-social">
+                    <h4 class="social-title">SUIVEZ-NOUS</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/junior.lecherif" target="_blank" class="social-btn facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.017 0C8.396 0 7.989.016 6.756.08 5.526.145 4.707.28 3.999.502c-.728.222-1.347.518-1.963 1.104C1.45 2.192 1.154 2.811.932 3.539c-.222.708-.357 1.527-.422 2.757C.448 7.529.432 7.936.432 11.557s.016 4.028.08 5.261c.065 1.23.2 2.049.422 2.757.222.728.518 1.347 1.104 1.963.616.586 1.235.882 1.963 1.104.708.222 1.527.357 2.757.422 1.233.064 1.64.08 5.261.08s4.028-.016 5.261-.08c1.23-.065 2.049-.2 2.757-.422.728-.222 1.347-.518 1.963-1.104.586-.616.882-1.235 1.104-1.963.222-.708.357-1.527.422-2.757.064-1.233.08-1.64.08-5.261s-.016-4.028-.08-5.261c-.065-1.23-.2-2.049-.422-2.757-.222-.728-.518-1.347-1.104-1.963C18.391 1.15 17.772.854 17.044.632c-.708-.222-1.527-.357-2.757-.422C13.054.016 12.647 0 12.017 0zm0 2.17c3.573 0 3.994.014 5.404.078 1.304.06 2.012.271 2.482.451.624.243 1.069.534 1.537 1.003.468.468.76.913 1.003 1.537.18.47.391 1.178.451 2.482.064 1.41.078 1.831.078 5.404s-.014 3.994-.078 5.404c-.06 1.304-.271 2.012-.451 2.482-.243.624-.534 1.069-1.003 1.537-.468.468-.913.76-1.537 1.003-.47.18-1.178.391-2.482.451-1.41.064-1.831.078-5.404.078s-3.994-.014-5.404-.078c-1.304-.06-2.012-.271-2.482-.451-.624-.243-1.069-.534-1.537-1.003-.468-.468-.76-.913-1.003-1.537-.18-.47-.391-1.178-.451-2.482-.064-1.41-.078-1.831-.078-5.404s.014-3.994.078-5.404c.06-1.304.271-2.012.451-2.482.243-.624.534-1.069 1.003-1.537.468-.468.913-.76 1.537-1.003.47-.18 1.178-.391 2.482-.451 1.41-.064 1.831-.078 5.404-.078z"/>
+                                <path d="M12.017 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.155a3.993 3.993 0 110-7.986 3.993 3.993 0 010 7.986zm7.846-10.405a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@CherifCode" target="_blank" class="social-btn youtube" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="copyright">
+                    <p>&copy; 2024 Collège René Kanga. Tous droits réservés.</p>
+                    <div class="footer-links">
+                        <a href="#">Politique de confidentialité</a>
+                        <span>•</span>
+                        <a href="#">Mentions légales</a>
+                        <span>•</span>
+                        <a href="#">Plan du site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+   </section>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script src="assets/js/main.js"></script>
+   <!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "fN1HdxWjDGn5AneDv",
+            });
+        })();
+   </script>
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const showFormBtn = document.getElementById('showFormBtn');
+            const showContactBtn = document.getElementById('showContactBtn');
+            const backToIntroBtn = document.getElementById('backToIntro');
+            const contactIntro = document.getElementById('contact-intro');
+            const contactForm = document.getElementById('contactForm');
+            const contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+            const modalSucces = new bootstrap.Modal(document.getElementById("wmessageSucces"));
+            const nameSociete = "Collège Rene Kanga de Divo"
+            var objectDemande = document.getElementById("wsubject");
+
+            document.getElementById("wsociete_name").value = nameSociete;
+            objectDemande.addEventListener("change",function() {
+                 document.getElementById("wtitle").value.value = this.value;
+            })
+            // document.getElementById("wtitle").value = titleEmail;
+            // Afficher le formulaire
+            showFormBtn.addEventListener('click', function() {
+                contactIntro.style.display = 'none';
+                contactForm.style.display = 'block';
+                contactForm.classList.add('slide-in');
+                
+                // Scroll vers le formulaire
+                contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // Afficher la modal de contact direct
+            showContactBtn.addEventListener('click', function() {
+                contactModal.show();
+            });
+
+            // Retour à l'intro
+            backToIntroBtn.addEventListener('click', function() {
+                contactForm.style.display = 'none';
+                contactIntro.style.display = 'flex';
+                contactIntro.classList.add('slide-in');
+                
+                // Scroll vers l'intro
+                contactIntro.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // Gestion du formulaire
+            const form = contactForm.querySelector('form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if(!check_fields("wname","wmessageErrorName","Veuillez saisir votre nom svp !")) 
+                return false;
+
+                if(!check_fields("wfirstName","wfirtnameError","Veuillez saisir votre Prénom(s) svp !")) 
+                return false;
+
+                if(!check_fields("wphone","wphoneError","Veuillez saisir votre numéro de téléphone svp !")) 
+                return false;
+
+                if(!check_fields("wlocation","wlocatError","Veuillez saisir votre adresse svp !")) 
+                return false;
+
+                if(!check_fields("wemail","wemailError","Veuillez saisir votre email svp !")) 
+                return false;
+
+                if(!check_fields("wsubject","wsubjectError","Veuillez sélectionner vottre objet de demande svp !")) 
+                return false;
+
+                if(!check_fields("wmessage","wmessageError","Veuillez entrez votre message svp !")) 
+                return false;
+
+                // Validation basique
+                // const requiredFields = form.querySelectorAll('input[required], select[required], textarea[required]');
+                 let isValid = true;
+                
+                // requiredFields.forEach(field => {
+                //     if (!field.value.trim()) {
+                //         isValid = false;
+                //         field.classList.add('is-invalid');
+                //     } else {
+                //         field.classList.remove('is-invalid');
+                //     }
+                // });
+                
+                if (isValid) {
+                    // Simulation d'envoi
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Envoi en cours...';
+                    submitBtn.disabled = true;
+
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+                    
+                    setTimeout(() => {
+                        // alert('Message envoyé avec succès ! Nous vous répondrons dans les 24h.');
+                        modalSucces.show()
+                        form.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                }
+            });
+        });
+
+        // gestion du message whatsapp
+
+        const NUMERO_TEL = "2250153569931"
+
+        var contactWhatsapp = document.querySelector(".contact-item")
+        
+        contactWhatsapp.addEventListener("click",function(event) {
+            event.preventDefault()
+            var message = "Bonjour, puis-je avoir plus d'information sur l'inscription ?"
+            sendWhatsappMessage(NUMERO_TEL,message)
+        })
+        
+   </script>
+
+</body>
+</html>

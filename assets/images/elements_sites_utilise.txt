@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 texte : Inria Sans
+=======
+texte : Inria Sans
+>>>>>>> 16d1db31d597dd2691f9205fc2987380e84c9b87
 color : 

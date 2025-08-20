@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -751,4 +752,762 @@
     </script>
    
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenu au collège Rene Kanga</title> 
+    <link rel="icon" type="image/png" href="assets/images/logo-ecole.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+      /* Section accordéons */
+        .accordion-section {
+            width: 85%;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .accordion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Item accordéon */
+        .accordion-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Bouton accordéon */
+        .accordion-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            color: white;
+            border: none;
+            padding: 20px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-btn:hover {
+            background: linear-gradient(135deg, #d35400, #e67e22);
+        }
+
+        /* Icône + / - */
+        .accordion-icon {
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        /* Contenu accordéon */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background: #f8f9fa;
+            transition: max-height 0.4s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 300px;
+        }
+
+        .accordion-text {
+            padding: 25px;
+            color: #555;
+            line-height: 1.6;
+            border-top: 3px solid #e67e22;
+        }
+
+        /* État actif */
+        .accordion-item.active .accordion-btn {
+            background: linear-gradient(135deg, #d35400, #e67e22);
+        }
+
+        .accordion-item.active .accordion-icon {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(45deg);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .accordion-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .accordion-section {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .accordion-btn {
+                padding: 18px 20px;
+                font-size: 1rem;
+            }
+
+            .accordion-text {
+                padding: 20px;
+            }
+        }
+
+        .container-galeries {
+           background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+           
+            padding: 40px 0;
+
+        }
+
+        .carousel-container {   
+            width: 80%;         /* Ton 80% demandé */
+            margin: 0 auto;     /* Centre horizontalement */
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;      /* Hauteur fixe pour éviter que le bg bouge */
+            object-fit: cover;  /* Coupe et adapte l’image */
+            border-radius: 5px; /* Optionnel : angles arrondis pour un effet moderne */
+            margin-bottom: 20px;
+        }
+
+        
+
+        .voir_gal {
+            text-align: center; 
+            width: 80%;
+            margin: auto; 
+        } 
+
+        .voir_gal a {         
+            color: #E68E02;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;         
+            width: 40%;              
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s ease-in;
+        }
+
+        .voir_gal a:hover{
+            background-color: black;
+            color: white;
+            transform:translateX(20px);
+        }
+
+        .voir_gal .fa-arrow-right {
+            margin-left: 20px;
+
+        }
+
+        @media (max-width: 768px) {
+            .carousel-inner img {
+                height: 300px; /* Plus petit sur mobile */
+                width: 100%;
+                margin:auto;
+                margin-bottom: 10px;
+            }
+
+             .voir_gal a {
+                 
+                  width: 90%;  
+                  padding: 5px;  
+                  font-size: 17px;
+             }
+        }
+
+    </style>
+
+</head>
+<body data-page="accueil">
+
+     <section class="container-page">
+        <div class="container-hearder">
+             <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid d-flex align-items-center">
+                    <!-- Logo à gauche -->
+                    <div>
+                      <img src="assets/images/logo-ecole.jpg" alt="logo du site" width="70" height="70">
+                    </div>
+                    
+                    <!-- Bouton hamburger pour mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <!-- Menu centré horizontalement (entre logo et droite) -->
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
+                        <ul class="navbar-nav mb-2 mb-lg-0 gap-5">
+                            <li class="nav-item">
+                            <a class="nav-link active textHeader" href="index.html" id="accueil"><i class="fa-solid fa-house" style="margin-right:4px;"></i>Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active textHeader" href="formation.html" id="formation"><i class="fa-solid fa-graduation-cap" style="margin-right:4px;"></i>Formation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active textHeader" href="contact.html" id="contact"><i class="fa-solid fa-envelope" style="margin-right:4px;"></i>Contact</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link active textHeader" href="galeries.html" id="galeries"><i class="fa-solid fa-images" style="margin-right:4px;"></i>Galeries</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container-info">
+            <div class="row">
+                <div class="div col-lg-1 flash-info"><span data-aos="fade-down">Flash info</span></div>
+                <div class="div col-lg-11 info-ecole text-defile">
+                    <span>🎓 Rejoignez le Collège René Kanga ! Inscriptions ouvertes à partir du 15 septembre 2025.</span>
+                    <span>🎓 Rejoignez le Collège René Kanga ! Inscriptions ouvertes à partir du 15 septembre 2025.</span>
+                    <span>🎓 Rejoignez le Collège René Kanga ! Inscriptions ouvertes à partir du 15 septembre 2025.</span>
+                </div>
+            </div>
+            <div id="schoolCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-inner carousel_respons">
+                
+                <div class="carousel-item active">
+                    <div class="carousel-bg" style="background-image: url('assets/images/image_welcome_2.jpeg');background-repeat: no-repeat;">
+                        <div class="overlay">
+                          <span data-aos="zoom-in">Bienvenue au collège René Kanga de Divo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-bg" style="background-image: url('assets/images/image_fond_welcome_1.jpeg');background-repeat: no-repeat;">
+                        <div class="overlay">
+                          <span>Un environnement d'apprentissage unique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-bg" style="background-image: url('assets/images/image_welcom_3.jpeg');background-repeat: no-repeat;">
+                        <div class="overlay">
+                          <span>Des professeurs engagés et passionnés</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="row info-stats">
+               <div class="col-lg-3 stat-box" data-aos="fade-up">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <div class="stat-text">
+                        <span class="stat-number" id="stat-number"></span>
+                        <label class="stat-label">Élèves</label>
+                    </div>
+                </div>
+                <div class="col-lg-3 stat-box" data-aos="fade-up">
+                    <i class="fa-solid fa-flag"></i>
+                    <div class="stat-text">
+                        <span class="stat-number" id="nb_nation"></span>
+                        <label class="stat-label">Nationalités</label>
+                    </div>
+                </div>
+                <div class="col-lg-3 stat-box" data-aos="fade-up">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="stat-text">
+                        <span class="stat-number"><label id="penc_admis_bepc"></label>%</span>
+                        <label class="stat-label">Réussite au BEPC</label>
+                    </div>
+                </div>      
+                <div class="col-lg-3 stat-box" data-aos="fade-up">
+                    <i class="fas fa-thumbs-up"></i>
+                    <div class="stat-text">
+                        <span class="stat-number"><label id="penc_admis_bac"></label>%</span>
+                        <label class="stat-label">Réussite au BAC</label>
+                    </div>
+                </div>      
+            </div>
+
+             <div class="row infoStatsRespon">
+                <div class="col-md-6 col-sm-6"></div>
+                <div class="col-md-6 col-sm-6"></div>
+             </div>
+
+            <div class="container-plus-info les-titres">
+                <div class="row">
+                   <div class="col" data-aos="zoom-in">
+                       <label for="no_form">Nos Formations</label>
+                   </div>
+                </div>
+            </div>
+
+            <div class="inf_cycle">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="card mb-3 font-noir">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="assets/images/premier_cycle_logo.png" class="img-fluid rounded-start" alt="Image d'un elève du premier cycle"; style="width:100%;height:100%";>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1er CYCLE</h5>
+                                        <p class="card-text">De là 6ème à la 3ème</p>
+                                        <p class="card-text"><small class="text-body-secondary"><button class="btn-cycle1">En savoir plus</button></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 cycle2" data-aos="fade-left">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="assets/images/second_sycle_logo.png" class="img-fluid rounded-start" alt="Image d'un elève du premier cycle">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2nd CYCLE</h5>
+                                        <p class="card-text">De là 2nd à la Tl (A et D)</p>
+                                        <p class="card-text"><small class="text-body-secondary"><button class="btn-cycle1">En savoir plus</button></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="container-plus-info les-titres">
+                <div class="row">
+                   <div class="col" data-aos="zoom-in">
+                       <label for="no_form">Pourquoi chosir le Collège René Kanga ?</label>
+                   </div>
+                </div>
+            </div>
+
+            <div class="choix1">
+                <div class="row furturAmb">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="row">
+                            <label for="">Pour un futur Ambitieux</label>
+                        </div>
+                        <div class="row">
+                            <p>Notre école prépare chaque élève à viser l’excellence, à croire en ses capacités et à construire un avenir à la hauteur de ses rêves et de ses objectifs.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <img src="assets/images/choisir_logo2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+             <div class="choix1">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="assets/images/choisir_ecole.svg" alt="">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="row">
+                            <label for="">Un enseignement rigoureux .</label>
+                        </div>
+                        <div class="row">
+                            <p>L’école offre une formation sérieuse, encadrée, exigeante et bien structurée. Elle vise à transmettre aux élèves des compétences solides, basées sur la discipline, la qualité pédagogique et la performance scolaire.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>           
+    </section>
+
+    <div class="container-plus-info les-titres">
+        <div class="row">
+            <div class="col" data-aos="zoom-in">
+                <label for="no_form">Nos galeries.</label>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-galeries">
+        <section class="container-galeries">
+        <div class="carousel-container">
+            <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner" data-aos="zoom-in">
+                <div class="carousel-item active">
+                <img src="assets/images/recreation.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <img src="assets/images/prix_excellence.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <img src="assets/images/ceremonie_honneur.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+
+        <div class="voir_gal" data-aos="fade-up">
+            <a href="galeries.html">Voir plus<i class="fas fa-arrow-right"></i></a>
+        </div>
+        </section>
+     
+    </section>
+
+    <div class="container-plus-info les-titres">
+        <div class="row">
+            <div class="col" data-aos="zoom-in">
+                <label for="no_form">Questions pratiques ?</label>
+            </div>
+        </div>
+    </div>
+
+    <section class="accordeon">
+        <!-- Section Accordéons -->
+        <div class="accordion-section" data-aos="fade-up">
+            <div class="accordion-grid">
+                <!-- Colonne gauche -->
+                <div>
+                    <!-- Question 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn" onclick="toggleAccordion(this)">
+                            <span>Comment s'inscrire ?</span>
+                            <div class="accordion-icon">+</div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                <strong>Processus d'inscription simple :</strong><br>
+                                1. Remplissez le formulaire de pré-inscription en ligne<br>
+                                2. Soumettez les documents requis<br>
+                                3. Effectuez le paiement des frais d'inscription<br>
+                                4. Confirmez votre inscription lors de l'entretien
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn" onclick="toggleAccordion(this)">
+                            <span>Quels sont les frais de scolarité ?</span>
+                            <div class="accordion-icon">+</div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                <strong>Frais de scolarité 2024-2025 :</strong><br>
+                                • Premier cycle : 350 000 FCFA/an<br>
+                                • Second cycle : 400 000 FCFA/an<br>
+                                • Frais d'inscription : 50 000 FCFA<br>
+                                • Possibilité de paiement en 3 tranches
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn" onclick="toggleAccordion(this)">
+                            <span>Y a-t-il un transport scolaire ?</span>
+                            <div class="accordion-icon">+</div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                <strong>Service de transport disponible :</strong><br>
+                                • 5 lignes de transport couvrant Abidjan<br>
+                                • Véhicules modernes et sécurisés<br>
+                                • Accompagnateurs qualifiés<br>
+                                • Tarif : 80 000 FCFA/trimestre
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne droite -->
+                <div>
+                    <!-- Question 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn" onclick="toggleAccordion(this)">
+                            <span>Quelles sont les Matères proposées ?</span>
+                            <div class="accordion-icon">+</div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                <strong>Matères disponibles :</strong><br>
+                                • Série A : Littéraire (A1, A2)<br>
+                                • Série C : Mathématiques et Sciences Physiques<br>
+                                • Série D : Mathématiques et Sciences Naturelles<br>
+                                • Classes préparatoires aux grandes écoles
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn" onclick="toggleAccordion(this)">
+                            <span>Quels sont les horaires de cours ?</span>
+                            <div class="accordion-icon">+</div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                <strong>Emploi du temps :</strong><br>
+                                • Lundi à Vendredi : 7h30 - 17h00<br>
+                                • Samedi : 7h30 - 12h30 (rattrapage)<br>
+                                • Pause déjeuner : 12h00 - 13h30<br>
+                                • Études dirigées : 17h00 - 18h00
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn" onclick="toggleAccordion(this)">
+                            <span>Quelles activités extrascolaires ?</span>
+                            <div class="accordion-icon">+</div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-text">
+                                <strong>Activités proposées :</strong><br>
+                                • Sports : Football, Basketball, Volleyball<br>
+                                • Clubs : Théâtre, Musique, Informatique<br>
+                                • Competitions : Concours général, Olympiades<br>
+                                • Sorties éducatives et voyages pédagogiques
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="documents-section">
+            <h2 class="documents-title" data-aos="zoom-in">Documents</h2>
+            
+            <div class="documents-list" data-aos="zoom-in">
+                <div class="document-item">
+                    <span class="document-text">Dossier à fournir pour l'inscription des élèves du premier cycle.</span>
+                    <button class="download-btn" onclick="telechargerFichier('assets/fichiers/figma-raccourcis-clavier.pdf','dossier_a_fournir_inscription_premier_cycle.pdf')">
+                        <svg class="download-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm9-13h-6v1.99h6v14.03H3V4.99h6V3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="document-item">
+                    <span class="document-text">Dossier à fournir pour l'inscription des élèves du second cycle.</span>
+                    <button class="download-btn" onclick="telechargerFichier('assets/fichiers/P1C3_Menu.pdf','dossier_a_fournir_inscription_second_cycle.pdf')">
+                        <svg class="download-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm9-13h-6v1.99h6v14.03H3V4.99h6V3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="document-item">
+                    <span class="document-text">Fiche de renseignement – Premier Cycle (6e à 3e)</span>
+                    <button class="download-btn" onclick="telechargerFichier('assets/fichiers/P1C3_Accueil.pdf','fiche_renseignement_premier_cycle.pdf')">
+                        <svg class="download-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm9-13h-6v1.99h6v14.03H3V4.99h6V3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="document-item">
+                    <span class="document-text">Fiche de renseignement – Second Cycle (2nde à Tle)</span>
+                    <button class="download-btn" onclick="telechargerFichier('assets/fichiers/P1C3_Contact.pdf','fiche_renseignement_second_cycle.pdf')">
+                        <svg class="download-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm9-13h-6v1.99h6v14.03H3V4.99h6V3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content" data-aos="zoom-in">
+            <!-- Logo et informations -->
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="assets/images/logo-ecole.jpg" alt="Logo Collège René Kanga" class="logo-img">
+                    <div class="logo-text">
+                        <h3>Collège René Kanga</h3>
+                        <p>Excellence • Innovation • Réussite</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacts -->
+            <div class="footer-contacts">
+                <h4 class="contacts-title">CONTACTS</h4>
+                <div class="contact-item">
+                    <i class="contact-icon">📞</i>
+                    <span style="text-decoration: none;">+225 00 00 00 00 00</span>
+                </div>
+                <div class="contact-item" onclick="sendWhatsappMessage('2250153569931','Bonjour, puis-je avoir plus de renseignements concernant l\'inscription ?')">
+                        <i class="fab fa-whatsapp contact-whatsapp"></i>
+                        <span>+225 01 02 03 04 05</span>
+                </div>
+                <div class="contact-item">
+                    <i class="contact-icon">✉️</i>
+                    <span>collegerenekanga@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="contact-icon">📍</i>
+                    <span>Abidjan, Côte d'Ivoire</span>
+                </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="footer-social">
+                <h4 class="social-title">SUIVEZ-NOUS</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com/junior.lecherif" target="_blank" class="social-btn facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-btn instagram" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.017 0C8.396 0 7.989.016 6.756.08 5.526.145 4.707.28 3.999.502c-.728.222-1.347.518-1.963 1.104C1.45 2.192 1.154 2.811.932 3.539c-.222.708-.357 1.527-.422 2.757C.448 7.529.432 7.936.432 11.557s.016 4.028.08 5.261c.065 1.23.2 2.049.422 2.757.222.728.518 1.347 1.104 1.963.616.586 1.235.882 1.963 1.104.708.222 1.527.357 2.757.422 1.233.064 1.64.08 5.261.08s4.028-.016 5.261-.08c1.23-.065 2.049-.2 2.757-.422.728-.222 1.347-.518 1.963-1.104.586-.616.882-1.235 1.104-1.963.222-.708.357-1.527.422-2.757.064-1.233.08-1.64.08-5.261s-.016-4.028-.08-5.261c-.065-1.23-.2-2.049-.422-2.757-.222-.728-.518-1.347-1.104-1.963C18.391 1.15 17.772.854 17.044.632c-.708-.222-1.527-.357-2.757-.422C13.054.016 12.647 0 12.017 0zm0 2.17c3.573 0 3.994.014 5.404.078 1.304.06 2.012.271 2.482.451.624.243 1.069.534 1.537 1.003.468.468.76.913 1.003 1.537.18.47.391 1.178.451 2.482.064 1.41.078 1.831.078 5.404s-.014 3.994-.078 5.404c-.06 1.304-.271 2.012-.451 2.482-.243.624-.534 1.069-1.003 1.537-.468.468-.913.76-1.537 1.003-.47.18-1.178.391-2.482.451-1.41.064-1.831.078-5.404.078s-3.994-.014-5.404-.078c-1.304-.06-2.012-.271-2.482-.451-.624-.243-1.069-.534-1.537-1.003-.468-.468-.76-.913-1.003-1.537-.18-.47-.391-1.178-.451-2.482-.064-1.41-.078-1.831-.078-5.404s.014-3.994.078-5.404c.06-1.304.271-2.012.451-2.482.243-.624.534-1.069 1.003-1.537.468-.468.913-.76 1.537-1.003.47-.18 1.178-.391 2.482-.451 1.41-.064 1.831-.078 5.404-.078z"/>
+                            <path d="M12.017 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.155a3.993 3.993 0 110-7.986 3.993 3.993 0 010 7.986zm7.846-10.405a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@CherifCode" target="_blank" class="social-btn youtube" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <div class="copyright">
+                <p>&copy; 2024 Collège René Kanga. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <span>•</span>
+                    <a href="#">Mentions légales</a>
+                    <span>•</span>
+                    <a href="#">Plan du site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+   <!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        document.getElementById("stat-number").innerText = "0"
+        // fonction pour les accordeons
+         function toggleAccordion(button) {
+            const item = button.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const icon = button.querySelector('.accordion-icon');
+            
+            // Fermer tous les autres accordéons
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.accordion-content').classList.remove('active');
+                    otherItem.querySelector('.accordion-icon').textContent = '+';
+                }
+            });
+            
+            // Toggle l'accordéon actuel
+            if (item.classList.contains('active')) {
+                // Fermer
+                item.classList.remove('active');
+                content.classList.remove('active');
+                icon.textContent = '+';
+            } else {
+                // Ouvrir
+                item.classList.add('active');
+                content.classList.add('active');
+                icon.textContent = '−';
+            }
+        }
+
+       function compteEleves() {
+          var nombreEleves = 2673;
+
+          for(var i = 0; i < nombreEleves; i++) {
+               i++;
+               document.getElementById("stat-number").innerText = i;
+          }
+       }
+
+       CompteElemts('stat-number', 2673,2000)
+       CompteElemts('nb_nation', 50,2000);
+       CompteElemts('penc_admis_bepc', 65,2000);
+       CompteElemts('penc_admis_bac', 70,2000);
+
+    </script>
+   
+</body>
+>>>>>>> 16d1db31d597dd2691f9205fc2987380e84c9b87
 </html>
